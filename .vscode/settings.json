@@ -1,0 +1,13 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true
+  },
+  "salesforcedx-vscode-core.show-cli-success-msg": false,
+  "salesforcedx-vscode-slds.basic.mobileValidation": false,
+  "salesforcedx-vscode-slds.basic.invalid": false,
+  "salesforcedx-vscode-slds.enabled": false,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "xml.preferences.showSchemaDocumentationType": "none"
+}

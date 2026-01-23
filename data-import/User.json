@@ -1,0 +1,23 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "User",
+                "referenceId": "UserRef1"
+            },
+            "ProfileId": "ID_FOR_EINSTEIN_AGENT_USER_PROFILE",
+            "Username": "afdx-agent@SOMETHING_UNIQUE.org",
+            "Alias": "AFDXagnt",
+            "CommunityNickname": "AFDX TestDrive Agent",
+            "Email": "noreply@example.com",
+            "FirstName": "AFDX TestDrive",
+            "LastName": "Agent",
+            "IsActive": true,
+            "ForecastEnabled": false,
+            "EmailEncodingKey": "UTF-8",
+            "LanguageLocaleKey": "en_US",
+            "LocaleSidKey": "en_US",
+            "TimeZoneSidKey": "America/Los_Angeles"
+        }
+    ]
+}
