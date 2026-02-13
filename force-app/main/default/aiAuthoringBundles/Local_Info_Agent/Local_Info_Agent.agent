@@ -11,8 +11,6 @@ config:
     default_agent_user: "UPDATE_WITH_YOUR_DEFAULT_AGENT_USER"
 
 variables:
-    guest_name: mutable string = ""
-        description: "The name of the guest interacting with the agent"
     guest_interests: mutable string = ""
         description: "The types of events or activities the guest is interested in"
     reservation_required: mutable boolean = False
@@ -26,13 +24,6 @@ language:
 start_agent topic_selector:
     description: "Welcome the user and determine the appropriate topic based on user input"
     reasoning:
-        instructions: ->
-            if @variables.guest_name:
-                | The guest's name is {!@variables.guest_name}. Use their name naturally in conversation.
-            else:
-                | The guest has not shared their name yet. In your FIRST response, you MUST greet them warmly
-                  as a Coral Cloud Resort assistant and ask for their name before addressing any other request.
-                  Do not skip this step — always ask for the guest's name before proceeding.
         actions:
             go_to_local_weather: @utils.transition to @topic.local_weather
             go_to_local_events: @utils.transition to @topic.local_events
@@ -40,9 +31,6 @@ start_agent topic_selector:
             go_to_escalation: @utils.transition to @topic.escalation
             go_to_off_topic: @utils.transition to @topic.off_topic
             go_to_ambiguous_question: @utils.transition to @topic.ambiguous_question
-            collect_guest_name: @utils.setVariables
-                description: "Collect the guest's name when they share it"
-                with guest_name = ...
 
 topic escalation:
     label: "Escalation"
@@ -172,9 +160,13 @@ topic local_events:
               Do not provide information unrelated to local events or outside the specified area.
               Do not provide information about resort experiences.
 
-              If you do not already know the guest's interests, ask them about their interests so you can
-              provide relevant event information. Use the {!@actions.check_events} action to get a list of
-              events once you know what the guest is interested in.
+              Determine the guest's interests from their message. If the guest's message already indicates
+              what they are interested in (e.g. "are any local movies playing?" means they are interested
+              in movies), use {!@actions.collect_interests} to save that interest immediately. Only ask the
+              guest about their interests if their request is too vague to determine a specific event type.
+
+              Once you know the guest's interests, use the {!@actions.check_events} action to get a list of
+              matching events.
 
               IMPORTANT: Only call {!@actions.check_events} ONCE per conversation. After receiving event results,
               immediately summarize the events for the guest in your response. Do NOT call the action again —
