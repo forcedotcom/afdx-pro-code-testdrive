@@ -1,6 +1,6 @@
 public class WeatherService {
     /**
-     * Gets the weather at Coral Cloud Resorts for the provided date.
+     * Gets the weather at the resort for the provided date.
      * Returns mocked weather data for demonstration purposes.
      */
     public static Weather getResortWeather(Datetime dateToCheck) {
@@ -26,7 +26,7 @@ public class WeatherService {
             maxTempC +
             '°C (' +
             maxTempF +
-            '°F) at Coral Cloud Resorts.';
+            '°F) at the resort.';
 
         Weather weather = new Weather();
         weather.minTemperatureC = minTempC;

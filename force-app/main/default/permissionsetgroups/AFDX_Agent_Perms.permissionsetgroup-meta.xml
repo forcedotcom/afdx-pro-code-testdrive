@@ -3,7 +3,7 @@
     <description>Assigns perms required by Agentforce service agents.</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>AFDX Agent Perms</label>
-    <permissionSets>Coral_Cloud_Agent</permissionSets>
+    <permissionSets>Resort_Agent</permissionSets>
     <permissionSets>force__AgentforceServiceAgentBase</permissionSets>
     <permissionSets>force__AgentforceServiceAgentUser</permissionSets>
     <permissionSets>force__EinsteinGPTPromptTemplateUser</permissionSets>

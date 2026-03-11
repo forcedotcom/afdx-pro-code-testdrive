@@ -2,7 +2,9 @@
 
 Use this hands-on project to learn how to create next-gen Agentforce agents using Agent Script and Agentforce DX.
 
-This project contains a pre-built agent called Local Info Agent for the Coral Cloud Resort application. The agent demonstrates:
+This Salesforce DX project contains a pre-built agent called Local Info Agent that could be embedded in, for example, a resort's web site. The agent provides local weather updates, shares information about local events, and helps guests with facility hours. 
+
+The agent demonstrates:
 
 - Three types of agent actions (Invocable Apex, Prompt Template, and Flow)
 - Mutable variables
@@ -87,11 +89,11 @@ The `.agent` file you just edited uses the Agent Script language. This single re
 | `Local_Info_Agent.agent` | Agent Script | The agent definition — topics, reasoning, variables, and flow control |
 | `CheckWeather` | Apex Class | Invocable Apex. Checks current weather conditions for a given location |
 | `CurrentDate` | Apex Class | Invocable Apex. Returns the current date for use by the agent |
-| `WeatherService` | Apex Class | Provides mock weather data for Coral Cloud Resort |
-| `Get_Event_Info` | Prompt Template | Retrieves local events in Port Aurelia |
+| `WeatherService` | Apex Class | Provides mock weather data for the resort|
+| `Get_Event_Info` | Prompt Template | Retrieves local events |
 | `Get_Resort_Hours` | Flow | Returns facility hours and reservation requirements |
-| `Coral_Cloud_Agent` | Permission Set | Agent user permissions (Einstein Agent license) |
-| `Coral_Cloud_Admin` | Permission Set | Admin/developer Apex class access |
+| `Resort_Agent` | Permission Set | Agent user permissions (Einstein Agent license) |
+| `Resort_Admin` | Permission Set | Admin/developer Apex class access |
 | `AFDX_Agent_Perms` | Permission Set Group | Bundles agent user permissions for assignment |
 | `AFDX_User_Perms` | Permission Set Group | Bundles admin user permissions for assignment |
 
@@ -111,14 +113,12 @@ Try these prompts to see each type of agent action in action:
 - *"I'm interested in movies. What's showing nearby?"* — triggers a Prompt Template action.
 - *"When does the spa open?"* — triggers a Flow action.
 
-Return to `Local_Info_Agent.agent` in the editor and inspect the `local_weather` topic. Notice the pirate-themed instruction at the end of the reasoning block (around line 117). This single line controls how the agent responds — try changing it:
+### Suggested Next Steps
 
-1. Remove the pirate instruction from the Agent Script.
-2. Right-click inside the agent and select **AFDX: Validate this Agent**
-3. Click the **Compile & Restart** button in the Preview Panel to test your changes.
-4. Ask about the weather again — the response should now be in a normal tone.
-
-This demonstrates how Agent Script reasoning instructions directly control agent behavior — no redeployment required.
+1. [Learn about Agent Script](https://developer.salesforce.com/docs/ai/agentforce/guide/agent-script.html).
+1. Change how the Local Info Agent behaves by editing its Agent Script file.
+1. Right-click inside the agent and select **AFDX: Validate this Agent** to ensure that the Agent Script file is still valid.
+1. Click the **Compile & Restart** button in the Preview Panel and then ask a question to test your changes.
 
 ## Manual Setup
 

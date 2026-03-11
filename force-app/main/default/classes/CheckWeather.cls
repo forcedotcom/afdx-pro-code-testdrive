@@ -1,7 +1,7 @@
 public with sharing class CheckWeather {
     @InvocableMethod(
         label='Check Weather'
-        description='Check weather at Coral Cloud Resorts at a specific date'
+        description='Check weather at the resort for a specific date'
     )
     public static List<WeatherResponse> getWeather(
         List<WeatherRequest> requests
@@ -25,7 +25,7 @@ public with sharing class CheckWeather {
             weather.maxTemperatureC +
             '°C (' +
             weather.maxTemperatureF +
-            '°F) at Coral Cloud.';
+            '°F) at the resort.';
         return new List<WeatherResponse>{ response };
     }
 
@@ -39,15 +39,15 @@ public with sharing class CheckWeather {
 
     public class WeatherResponse {
         @InvocableVariable(
-            description='Minimum temperature in Celsius at Coral Cloud Resorts location for the provided date'
+            description='Minimum temperature in Celsius at the resort location for the provided date'
         )
         public Decimal minTemperature;
         @InvocableVariable(
-            description='Maximum temperature in Celsius at Coral Cloud Resorts location for the provided date'
+            description='Maximum temperature in Celsius at the resort location for the provided date'
         )
         public Decimal maxTemperature;
         @InvocableVariable(
-            description='Description of temperatures at Coral Cloud Resorts location for the provided date'
+            description='Description of temperatures at the resort location for the provided date'
         )
         public String temperatureDescription;
     }

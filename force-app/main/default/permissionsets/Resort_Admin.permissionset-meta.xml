@@ -9,13 +9,20 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CurrentDateTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>WeatherService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <description>Enables perms required by Coral Cloud service agents.</description>
+    <classAccesses>
+        <apexClass>WeatherServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Enables admin-level perms for development.</description>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>Coral Cloud Agent</label>
-    <license>Einstein Agent</license>
+    <label>Resort Admin</label>
     <userPermissions>
         <enabled>true</enabled>
         <name>RunFlow</name>
