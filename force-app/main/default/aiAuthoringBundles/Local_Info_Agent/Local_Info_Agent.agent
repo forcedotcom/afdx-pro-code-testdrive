@@ -188,7 +188,7 @@ subagent local_events:
     actions:
         check_events:
             description: "Retrieves information about events happening in Port Aurelia, the city surrounding Coral Cloud Resort. Use this when asked about events or activities. Assume that any general requests for information about events or activities is referring to the local area of Coral Cloud Resort and the surrounding city of Port Aurelia."
-            target: "prompt://Get_Event_Info"
+            target: "generatePromptResponse://Get_Event_Info"
             label: "Check Events"
             include_in_progress_indicator: True
             progress_indicator_message: "Checking local events..."
