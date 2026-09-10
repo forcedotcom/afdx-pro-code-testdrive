@@ -10,7 +10,7 @@ config:
     description: "A next-gen agent for Coral Cloud Resort that provides local weather updates and helps guests with resort facility hours."
 
 access:
-    default_agent_user: "UPDATE_WITH_YOUR_DEFAULT_AGENT_USER"
+    default_agent_user: "afdx-agent@testdrive.org29b37040-fded-4045-9cf4-75d7c88fb75f"
 
 variables:
     reservation_required: mutable boolean = False
