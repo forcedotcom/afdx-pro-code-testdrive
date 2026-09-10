@@ -45,32 +45,40 @@ sf agent validate authoring-bundle -n Local_Info_Agent --json
 
 #### Self-documentation lets agents understand the CLI.
 ```
-How would you call `sf agent validate authoring-bundle`?
+Without inspecting local files, figure out how to run `sf agent validate authoring-bundle`?
 ```
 
-
-### Behind every Salesforce skill is the CLI.
-
-* Every Salesforce skill teaches an agent to use the CLI for real work.
-* Without the CLI, those skills have nothing to run.
-* The CLI is the engine under the skills you hear about at the keynote.
+---
 
 ### Call any Salesforce API from the CLI.
 
-* Go beyond deploy and retrieve. Reach REST, Bulk, Connect, Tooling, and Graph.
-* One trusted connection reaches everything the platform exposes.
-* Your agents get that same reach. Anything the API does, an agent can drive.
+#### Go beyond deploy and retrieve. Reach REST, Bulk, Connect, Tooling, and Graph.
+
+##### Data Query
+```
+sf data query --query "SELECT Id, Name FROM Account LIMIT 5"
+```
+##### GraphQL Query
+```
+sf api request graphql --body "query accounts { uiapi { query { Account(first: 5) { edges { node { Id Name { value } } } } } } }"
+```
+##### Connect API
+```
+sf api request rest "/services/data/v64.0/connect/organization"
+```
+
+---
 
 ### The CLI is extensible and keeps growing with Salesforce.
 
-* Every plugin inherits the CLI's trusted auth, capabilities, and libraries.
-* Salesforce teams add headless paths to their services. The agent plugin proves a plugin does far more than move metadata.
-* You can extend it too. Agents like Agentforce Vibes and Claude now help you build plugins, and the community is growing.
+#### Every plugin inherits the CLI's trusted auth, capabilities, and libraries.
+```
+sf plugins
+```
+#### You can extend it too. Agents like Agentforce Vibes and Claude now help you build plugins, and the community is growing.
+```
+sf plugins discover
+```
 
-### Getting started with the Salesforce CLI.
+---
 
-* Install in minutes.
-
-## Staffer Note
-
-For a visitor who fears the terminal, do not sell mastery. Sell the linchpin. They do not need to master the CLI. Their agents do, and the CLI is what lets those agents work.

@@ -10,11 +10,17 @@ The Salesforce CLI is the agent-ready foundation of Salesforce development. It i
 * Does the real work: deploy, retrieve, test, data, org lifecycle.
 * Runs everywhere developers and their agents work: Vibes IDE, Cursor, Illuminated Cloud, Codex, CI/CD.
 
-### The Salesforce CLI is self-documenting, ideal for humans and agents.
+### The Salesforce CLI is built for humans.
 
-* Every command explains itself, so you never memorize.
+* Use `sf search`, your Salesforce superpower for finding commands.
+* Every command explains itself with `--help`, so you never memorize.
+* Autocomplete helps you quickly enter the right commands and flags.
+* Many long-running commands show status as you go.
+
+### The Salesforce CLI is optimized for agents.
+
 * Structured `--json` output lets an agent act on results, not just read them.
-* Self-documentation is what lets agents drive it correctly. That is what makes agents effective on Salesforce.
+* Self-documentation lets agents understand and drive the CLI.
 
 ### Behind every Salesforce skill is the CLI.
 
@@ -36,9 +42,10 @@ The Salesforce CLI is the agent-ready foundation of Salesforce development. It i
 
 ### Getting started with the Salesforce CLI.
 
-* Install in minutes.
-* Use `sf search`, your Salesforce superpower for finding commands.
-* Use autocomplete and stay productive without memorizing.
+* Install in minutes on Mac, Windows, or Linux.
+* Log in to your first org with `sf org login web`.
+* New to the terminal? Let an agent like Agentforce Vibes or Claude drive it for you.
+* Go deeper with the official docs and Trailhead.
 
 ## Staffer Note
 
