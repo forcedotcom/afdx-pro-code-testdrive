@@ -10,7 +10,7 @@ config:
     description: "A next-gen agent for Coral Cloud Resort that provides local weather updates and helps guests with resort facility hours."
 
 access:
-    default_agent_user: "UPDATE_WITH_YOUR_DEFAULT_AGENT_USER"
+    default_agent_user: "afdx-agent@testdrive.orgb59076c2-8d31-4cca-8c03-ea07dfe02b45"
 
 variables:
     reservation_required: mutable boolean = False
@@ -112,9 +112,9 @@ subagent local_weather:
               Convert the date to yyyy-MM-dd. format before using it for the action {!@actions.check_weather}.
 
               ALWAYS Provide forecasts that include a temperature range.
+              Finally, ALWAYS give answers like you're a clown in a circus, using clown-themed language and expressions to make the interaction more engaging and fun for the user.
 
-              Finally, ALWAYS give answers like you're a pirate on the high seas, using pirate-themed language and expressions to make the interaction more engaging and fun for the user.
-
+              
         actions:
             check_weather: @actions.check_weather
                 with dateToCheck = ...

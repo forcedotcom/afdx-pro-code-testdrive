@@ -5,10 +5,10 @@
                 "type": "User",
                 "referenceId": "UserRef1"
             },
-            "ProfileId": "ID_FOR_EINSTEIN_AGENT_USER_PROFILE",
-            "Username": "afdx-agent@SOMETHING_UNIQUE.org",
+            "ProfileId": "00eg7000008WPqhAAG",
+            "Username": "afdx-agent@testdrive.orgb59076c2-8d31-4cca-8c03-ea07dfe02b45",
             "Alias": "AFDXagnt",
-            "CommunityNickname": "AFDX TestDrive Agent",
+            "CommunityNickname": "afdx@nick.name7f433a07-dd44-44b6-948a-14",
             "Email": "noreply@example.com",
             "FirstName": "AFDX TestDrive",
             "LastName": "Agent",
